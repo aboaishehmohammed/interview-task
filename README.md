@@ -5,7 +5,7 @@ will help both of us to have accurate assessment results and avoid any discomfor
 
 # Task overview
 The candidate should implement a normalization java utility to be used to normalize
-numerical columns in a CSV file, the project will support two types of normalization approaches:
+numerical columns in a CSV csvFile, the project will support two types of normalization approaches:
 * Z-Score
 * Min-Max scaling
 
@@ -28,7 +28,7 @@ suit your needs.
 # Deliverables
 **All requirements mentioned in this section is a must, the submission will be considered as failed
 if one is missing**
-* The candidate should clone this project, add his solution, then deliver it as a compressed file.
+* The candidate should clone this project, add his solution, then deliver it as a compressed csvFile.
 * All test cases in [unit tests](src/test/java/com/progressoft/tools/NormalizerTest.java) should pass.
 * You are only allowed to use Java SE API, any additional libraries shouldn't be used especially for calculations
 * Always use HALF_EVEN when rounding decimal places and fractions.
@@ -41,18 +41,18 @@ mvn clean install
 ```shell script
 mvn clean
 ```
-* You should edit [NOTES.MD](NOTES.MD) file answering the questions in it.
+* You should edit [NOTES.MD](NOTES.MD) csvFile answering the questions in it.
 * Your feedback is welcomed, even if you are not able to deliver this assignment. 
 
 # Bonus Points
 To get additional points, you can apply one (or all) of the following:
-* Provide an executable jar file which allows the evaluator to use the implemented utility through 
+* Provide an executable jar csvFile which allows the evaluator to use the implemented utility through 
     command line as below:
     ```shell script
     java -jar iterview-task-1.0-SNAPSHOT.jar [SOURCE_PATH] [DEST_PATH] [COLUMN_TO_NORMALIZE] [NORMALIZATION_METHOD]
     ```
-    for example: if we want to read the ```/home/user/in/marks.csv``` file, apply a Min-Max normalization against
-     ```mark``` column in it, then save the updated csv file to ```/home/user/out/marks_normalized.csv```, 
+    for example: if we want to read the ```/home/user/in/marks.csv``` csvFile, apply a Min-Max normalization against
+     ```mark``` column in it, then save the updated csv csvFile to ```/home/user/out/marks_normalized.csv```, 
      the command should look like below:
     ```shell script
     java -jar interview-task-1.0-SNAPSHOT.jar /home/user/out/marks.csv /home/user/out/marks_normalized.csv mark min-max
@@ -62,8 +62,8 @@ To get additional points, you can apply one (or all) of the following:
     java -jar interview-task-1.0-SNAPSHOT.jar /home/user/out/marks.csv /home/user/out/marks_normalized.csv mark z-score
     ``` 
 * Support another type of files, like XML or json, make sure to not break the old cases as well. You can utilize third-party dependencies and libraries to implement this
-* Implement an HTML layout which allows a user to upload a file, choose the column to scale, 
-then generate the result CSV file, provide steps on how to use it. You can utilize third-party dependencies and librarires to implement this.
+* Implement an HTML layout which allows a user to upload a csvFile, choose the column to scale, 
+then generate the result CSV csvFile, provide steps on how to use it. You can utilize third-party dependencies and librarires to implement this.
 * There are some scenarios we didn't cover in our unit tests, can you find them and provide proper
 test coverage for them.
 

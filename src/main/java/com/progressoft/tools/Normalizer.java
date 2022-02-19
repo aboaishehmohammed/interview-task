@@ -1,5 +1,6 @@
 package com.progressoft.tools;
 
+import java.io.IOException;
 import java.nio.file.Path;
 
 public interface Normalizer {
@@ -14,7 +15,7 @@ public interface Normalizer {
      * @param colToStandardize the name of the column to normalize
      * @return
      */
-    ScoringSummary zscore(Path csvPath, Path destPath, String colToStandardize);
+    ScoringSummary zscore(Path csvPath, Path destPath, String colToStandardize) throws IOException;
 
     /**
      * Accepts a <code>csvPath</code> for a CSV file, perform a Min-Max normalization against
@@ -26,5 +27,5 @@ public interface Normalizer {
      * @param colToNormalize the name of the column to normalize
      * @return
      */
-    ScoringSummary minMaxScaling(Path csvPath, Path destPath, String colToNormalize);
+    ScoringSummary minMaxScaling(Path csvPath, Path destPath, String colToNormalize) throws IOException;
 }

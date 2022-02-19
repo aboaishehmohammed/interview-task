@@ -20,7 +20,7 @@ public class NormalizerTest {
     @BeforeEach
     public void beforeEach() {
         // TODO override it here
-        normalizer = null;
+        normalizer = new NormalizerImp();
     }
 
     public Normalizer normalizer() {
